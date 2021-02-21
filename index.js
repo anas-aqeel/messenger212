@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/public'))
 console.log(__dirname + '/public')
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/home.html')
+    res.sendFile(__dirname + '/index.html')
 })
 app.get('/api', (req, res) => {
     res.send(users)
