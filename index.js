@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const http = require('http').createServer(app)
-const port = 'https://messenger21.herokuapp.com/'
+const port = PROCESS.ENV.PORT || 8000
 const io = require('socket.io')(http)
 
 const users = []
