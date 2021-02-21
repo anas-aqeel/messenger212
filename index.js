@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const http = require('http').createServer(app)
-const port = process.env.PORT || 8000
+const port = 'https://messenger21.herokuapp.com/'
 const io = require('socket.io')(http)
 
 const users = []
@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/public'))
 console.log(__dirname + '/public')
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
+    res.sendFile(__dirname + '/home.html')
 })
 app.get('/api', (req, res) => {
     res.send(users)
