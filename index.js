@@ -9,10 +9,10 @@ const users = []
 app.use(express.static(__dirname + '/public'))
 console.log(__dirname + '/public')
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
-app.use('/api', (req, res) => {
+app.get('/api', (req, res) => {
     res.send(users)
 })
 
