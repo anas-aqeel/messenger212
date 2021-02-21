@@ -12,6 +12,11 @@ console.log(__dirname + '/public')
 app.use('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
+app.use('/api', (req, res) => {
+    res.send(users)
+})
+
+
 
 io.on('connection', (socket) => {
     socket.on('room-joined', (name, room) => {
