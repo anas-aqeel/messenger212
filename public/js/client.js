@@ -1,4 +1,4 @@
-const socket = io('https://messenger21.herokuapp.com/');
+const socket = io();
 // variables
 
 let chatForm = document.getElementById('chatForm');
